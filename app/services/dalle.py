@@ -75,7 +75,7 @@ def send_dalle_request_manga(panel: dict, narrative: dict):
     }
     headers = {
         "Content-Type": "application/json",
-        "Ocp-Apim-Subscription-Key": DALL_E_API_KEY
+        "api-key": DALL_E_API_KEY
     }
     try:
         response = requests.post(DALL_E_URL, json=payload, headers=headers)
