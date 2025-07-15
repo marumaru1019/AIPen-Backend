@@ -48,7 +48,7 @@ style: {style}
     )
     messages = [{"role": "user", "content": prompt}]
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=settings.OPENAI_MODEL_NAME,
         messages=messages,
          response_format={"type": "json_object"}
     )
@@ -58,7 +58,7 @@ style: {style}
 
 def generate_manga_narrative(prompt_text: str) -> dict:
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model=settings.OPENAI_MODEL_NAME,
         messages=[{"role": "user", "content": prompt_text}],
         response_format={"type": "json_object"}
     )
