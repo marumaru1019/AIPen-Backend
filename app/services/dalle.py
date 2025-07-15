@@ -30,7 +30,7 @@ def send_dalle_request_ehon(panel, genre, style):
     }
     headers = {
         "Content-Type": "application/json",
-        "Ocp-Apim-Subscription-Key": DALL_E_API_KEY
+        "api-key": DALL_E_API_KEY
     }
     try:
         response = requests.post(DALL_E_URL, json=payload, headers=headers)
