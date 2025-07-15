@@ -3,3 +3,4 @@ uvicorn
 requests
 openai==1.61.1
 python-dotenv
+gunicorn==20.1.0
